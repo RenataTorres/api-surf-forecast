@@ -1,0 +1,14 @@
+debug
+dist
+node_modules
+src/logs
+src/routes
+.serverless
+.build
+.webpack
+build
+node_modules
+src/routes
+.temp
+.eslintcache
+.npmrc
