@@ -1,80 +1,40 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es2020",
+    "target": "es2019",
+    "moduleResolution": "node",
     "module": "commonjs",
-    "rootDir": "./",
+    "lib": ["es2019"],
+    "sourceMap": true,
     "outDir": "dist",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
     "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
-    "moduleResolution": "node",
-    "baseUrl": "./",
-    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "lib": [
-      "es2020"
-    ],
+    "alwaysStrict": true,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
     "paths": {
-      "@src/*": [
-        "./src/*"
-      ],
-      "@test/*": [
-        "./test/*"
-      ],
-      "@config/*": [
-        "./src/config/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@helpers/*": [
-        "./src/helpers/*"
-      ],
-      "@contracts/*": [
-        "./src/contracts/*"
-      ],
-      "@useCases/*": [
-        "./src/useCases/*"
-      ],
-      "@network/*": [
-        "./src/network/*"
-      ],
-      "@controllers/*": [
-        "./src/controllers/*"
-      ]
-    }
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    },
+    "rootDirs": [
+      "./src",
+      "./test"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.ts",
-    "package.json"
+    "./src/**/*.ts",
+    "./test/**/*.ts"
   ],
   "exclude": [
-    "node_modules/**/*",
-    ".serverless/**/*",
-    ".webpack/**/*",
-    "_warmup/**/*",
-    ".vscode/**/*",
-    "*.config.js",
-    "**/*.js",
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "dist",
+    "./node_modules/*",
+    "dist"
   ]
 }
